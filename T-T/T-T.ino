@@ -6,7 +6,7 @@
 DHT dht(DHTPIN, DHTTYPE);
 
 void setup() {
-  pinMode (10,OUTPUT);
+  pinMode (11,OUTPUT);
   Serial.begin(9600);
   Serial.println(F("DHTxx test!"));
   dht.begin();
@@ -48,10 +48,10 @@ for (int i=0;i<3;i++){
   Serial.print(hif);
   Serial.println(F("°F"));
 
-      digitalWrite(10,HIGH);
-      delay((1/(t[0]*t[1]*t[2]))*50000000);
-      digitalWrite(10,LOW);
-      delay((1/(t[0]*t[1]*t[2]))*50000000);
-//      Serial.print((1/(t[0]*t[1]*t[2]))*50000000);
+      digitalWrite(11,HIGH);
+      delay((1/(t[0]*t[1]*t[2]*100))*5000000000);
+      digitalWrite(11,LOW);
+      delay((1/(t[0]*t[1]*t[2]*100))*5000000000);
+      Serial.print((1/(t[0]*t[1]*t[2]*100))*5000000000);
   
 }
